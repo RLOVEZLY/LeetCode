@@ -18,5 +18,7 @@ ListNode* deleteDuplicates(ListNode* head) {
                 temp->next = NULL;
             }
         }
-        return returnval->next;
+	ListNode* returnhead = returnval->next;
+	delete returnval;
+        return returnhead;
     }
